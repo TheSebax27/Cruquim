@@ -1,4 +1,4 @@
-const WA = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573001234567'
+const WA = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573217630395'
 
 export default function Contacto() {
   return (
@@ -55,7 +55,7 @@ export default function Contacto() {
           Haga clic en el botón y nos escribirá directamente por WhatsApp. Le respondemos en minutos.
         </p>
         <a
-          href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me gustaría hacer un pedido de productos CRUQUIM.')}`}
+          href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me gustaría hacer un pedido de productos CRUQUIM. ¿Me pueden asesorar?')}`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-lg text-white font-semibold transition hover:opacity-90"

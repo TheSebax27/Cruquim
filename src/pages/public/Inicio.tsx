@@ -30,7 +30,7 @@ export default function Inicio() {
               className="px-8 py-3 bg-white text-[#1a56a0] font-semibold rounded-lg hover:bg-blue-50 transition">
               Ver catálogo
             </Link>
-            <a href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER ?? '573001234567'}?text=${encodeURIComponent('Hola, quiero información sobre sus productos.')}`}
+            <a href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER ?? '573217630395'}?text=${encodeURIComponent('Hola, me gustaría información sobre los productos de CRUQUIM. ¿Me pueden ayudar?')}`}
               target="_blank" rel="noopener noreferrer"
               className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition">
               Contactar por WhatsApp

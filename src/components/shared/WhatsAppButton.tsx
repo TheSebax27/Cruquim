@@ -1,5 +1,5 @@
-const WA_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573001234567'
-const WA_MESSAGE = encodeURIComponent('Hola, me gustaría información sobre sus productos CRUQUIM.')
+const WA_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573217630395'
+const WA_MESSAGE = encodeURIComponent('Hola, me gustaría información sobre los productos de CRUQUIM. ¿Me pueden ayudar?')
 
 export default function WhatsAppButton() {
   return (

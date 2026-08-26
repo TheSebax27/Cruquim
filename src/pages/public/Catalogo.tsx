@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../../lib/supabase'
 import type { Producto, Categoria } from '../../types'
 
-const WA = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573001234567'
+const WA = import.meta.env.VITE_WHATSAPP_NUMBER ?? '573217630395'
 
 function imagenUrl(producto: Producto): string {
   if (producto.imagen_url) return producto.imagen_url
@@ -12,7 +12,7 @@ function imagenUrl(producto: Producto): string {
 }
 
 function CardProducto({ p }: { p: Producto }) {
-  const msg = encodeURIComponent(`Hola, me interesa el producto: ${p.nombre}${p.referencia ? ` (Ref: ${p.referencia})` : ''}`)
+  const msg = encodeURIComponent(`Hola, me gustaría información sobre el producto *${p.nombre}*${p.referencia ? ` (Ref: ${p.referencia})` : ''} que vi en el catálogo de CRUQUIM. ¿Está disponible?`)
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition flex flex-col">
       <div className="aspect-square bg-slate-50 overflow-hidden">
