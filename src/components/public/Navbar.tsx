@@ -4,7 +4,8 @@ import logo from '../../assets/cruquim.png'
 
 const links = [
   { to: '/', label: 'Inicio' },
-  { to: '/catalogo', label: 'Catálogo' },
+  { to: '/catalogo', label: 'Productos' },
+  { to: '/categorias', label: 'Categorías' },
   { to: '/nosotros', label: 'Nosotros' },
   { to: '/contacto', label: 'Contacto' },
 ]
@@ -14,20 +15,20 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="CRUQUIM" className="h-9 w-auto" />
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-20">
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="CRUQUIM" className="h-14 w-auto" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map(l => (
             <NavLink
               key={l.to}
               to={l.to}
               end={l.to === '/'}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${isActive
-                  ? 'text-[#1a56a0] border-b-2 border-[#1a56a0] pb-0.5'
+                `text-sm font-medium transition-colors pb-0.5 ${isActive
+                  ? 'text-[#1a56a0] border-b-2 border-[#2ea84b]'
                   : 'text-slate-600 hover:text-[#1a56a0]'
                 }`
               }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import type { Producto, Categoria } from '../../types'
 
@@ -53,9 +54,10 @@ function CardProducto({ p }: { p: Producto }) {
 }
 
 export default function Catalogo() {
+  const [searchParams] = useSearchParams()
   const [productos, setProductos] = useState<Producto[]>([])
   const [categorias, setCategorias] = useState<Categoria[]>([])
-  const [categoriaActiva, setCategoriaActiva] = useState<string>('all')
+  const [categoriaActiva, setCategoriaActiva] = useState<string>(searchParams.get('cat') ?? 'all')
   const [busqueda, setBusqueda] = useState('')
   const [loading, setLoading] = useState(true)
 

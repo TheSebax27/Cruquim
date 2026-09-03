@@ -4,6 +4,7 @@ import AdminLayout from './components/admin/AdminLayout'
 import Inicio from './pages/public/Inicio'
 import Catalogo from './pages/public/Catalogo'
 import Nosotros from './pages/public/Nosotros'
+import CategoriasPublico from './pages/public/CategoriasPublico'
 import Contacto from './pages/public/Contacto'
 import Login from './pages/admin/Login'
 import Dashboard from './pages/admin/Dashboard'
@@ -20,6 +21,7 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Inicio />} />
           <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/categorias" element={<CategoriasPublico />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
