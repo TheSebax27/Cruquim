@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import PublicLayout from './components/public/PublicLayout'
 import AdminLayout from './components/admin/AdminLayout'
 import Inicio from './pages/public/Inicio'
@@ -14,7 +14,7 @@ import Costos from './pages/admin/Costos'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Sitio público */}
         <Route element={<PublicLayout />}>
@@ -37,6 +37,6 @@ export default function App() {
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
