@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../../assets/cruquim.png'
 
 const links = [
   { to: '/', label: 'Inicio' },
@@ -15,11 +16,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm"
-            style={{ background: 'linear-gradient(135deg, #1a56a0, #2ea84b)' }}>
-            CQ
-          </div>
-          <span className="font-bold text-xl" style={{ color: '#1a56a0' }}>CRUQUIM</span>
+          <img src={logo} alt="CRUQUIM" className="h-9 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../../assets/cruquim.png'
 
 const servicios = [
   { icono: '🏠', titulo: 'Hogares', desc: 'Productos seguros y efectivos para el cuidado del hogar.' },
@@ -14,6 +15,7 @@ export default function Inicio() {
       <section className="relative overflow-hidden py-24 px-4"
         style={{ background: 'linear-gradient(135deg, #0f3d7a 0%, #1a56a0 50%, #2ea84b 100%)' }}>
         <div className="max-w-4xl mx-auto text-center text-white">
+          <img src={logo} alt="CRUQUIM" className="h-20 w-auto mx-auto mb-6" />
           <p className="text-sm font-semibold uppercase tracking-widest text-green-300 mb-3">
             Soluciones de limpieza profesional
           </p>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
+import logo from '../../assets/cruquim.png'
 
 export default function Login() {
   const { signIn } = useAuth()
@@ -29,12 +30,8 @@ export default function Login() {
       style={{ background: 'linear-gradient(135deg, #0f3d7a, #1a56a0)' }}>
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-3"
-            style={{ background: 'linear-gradient(135deg, #1a56a0, #2ea84b)' }}>
-            CQ
-          </div>
-          <h1 className="text-white text-2xl font-bold">CRUQUIM</h1>
-          <p className="text-blue-200 text-sm mt-1">Panel de administración</p>
+          <img src={logo} alt="CRUQUIM" className="h-16 w-auto mx-auto mb-3" />
+          <p className="text-blue-200 text-sm">Panel de administración</p>
         </div>
 
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl space-y-4">

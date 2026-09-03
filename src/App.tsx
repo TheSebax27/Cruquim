@@ -24,15 +24,16 @@ export default function App() {
           <Route path="/contacto" element={<Contacto />} />
         </Route>
 
-        {/* Panel admin — URL secreta */}
-        <Route path="/admin" element={<Login />} />
-        <Route path="/admin/*" element={<AdminLayout />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="productos" element={<Productos />} />
-          <Route path="categorias" element={<Categorias />} />
-          <Route path="inventario" element={<Inventario />} />
-          <Route path="costos" element={<Costos />} />
-          <Route index element={<Navigate to="dashboard" replace />} />
+        {/* Panel admin */}
+        <Route path="/admin">
+          <Route index element={<Login />} />
+          <Route element={<AdminLayout />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="productos" element={<Productos />} />
+            <Route path="categorias" element={<Categorias />} />
+            <Route path="inventario" element={<Inventario />} />
+            <Route path="costos" element={<Costos />} />
+          </Route>
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -1,4 +1,5 @@
 import { Navigate, NavLink, Outlet, useNavigate } from 'react-router-dom'
+import logo from '../../assets/cruquim.png'
 import { useAuth } from '../../hooks/useAuth'
 
 const navItems = [
@@ -21,7 +22,7 @@ export default function AdminLayout() {
     )
   }
 
-  if (!user) return <Navigate to="/admin" replace />
+  if (!user) return <Navigate to="/admin/" replace />
 
   async function handleSignOut() {
     await signOut()
@@ -33,14 +34,8 @@ export default function AdminLayout() {
       {/* Sidebar */}
       <aside className="w-56 bg-white border-r border-slate-100 flex flex-col fixed h-full">
         <div className="p-4 border-b border-slate-100">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold"
-              style={{ background: 'linear-gradient(135deg, #1a56a0, #2ea84b)' }}>
-              CQ
-            </div>
-            <span className="font-bold text-[#1a56a0]">CRUQUIM</span>
-          </div>
-          <p className="text-xs text-slate-400 mt-0.5 ml-9">Admin</p>
+          <img src={logo} alt="CRUQUIM" className="h-8 w-auto mb-1" />
+          <p className="text-xs text-slate-400">Panel de administración</p>
         </div>
 
         <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
