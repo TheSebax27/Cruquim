@@ -12,6 +12,7 @@ import Productos from './pages/admin/Productos'
 import Categorias from './pages/admin/Categorias'
 import Inventario from './pages/admin/Inventario'
 import Costos from './pages/admin/Costos'
+import Facturacion from './pages/admin/Facturacion'
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="categorias" element={<Categorias />} />
             <Route path="inventario" element={<Inventario />} />
             <Route path="costos" element={<Costos />} />
+            <Route path="facturacion" element={<Facturacion />} />
           </Route>
         </Route>
 

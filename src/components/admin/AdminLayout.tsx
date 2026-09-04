@@ -8,6 +8,7 @@ const navItems = [
   { to: '/admin/categorias', label: 'Categorías', icon: '🗂️' },
   { to: '/admin/inventario', label: 'Inventario', icon: '📋' },
   { to: '/admin/costos', label: 'Costos', icon: '💰' },
+  { to: '/admin/facturacion', label: 'Facturación', icon: '🧾' },
 ]
 
 export default function AdminLayout() {

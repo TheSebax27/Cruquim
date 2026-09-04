@@ -41,3 +41,23 @@ export interface MovimientoInventario {
   motivo: string | null
   created_at: string
 }
+
+export interface VentaLinea {
+  id: string
+  venta_id: string
+  producto_id: string
+  producto?: Producto
+  cantidad: number
+  precio_unitario: number
+  subtotal: number
+}
+
+export interface Venta {
+  id: string
+  cliente_nombre: string
+  cliente_telefono: string | null
+  total: number
+  notas: string | null
+  created_at: string
+  lineas?: VentaLinea[]
+}
